@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: 0;
+}
+body{
+
+    margin-top: 80px;
+}
+.grboom{
+    margin-top: 40px;
+    text-align: center;
+}
+.slider{
+    width: 50px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.Lenta{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 1005px;
+    position: absolute;
+    top: 100px;
+    animation: god 10s step-end;
+}
+
+.inform{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.inform span{
+    font-size: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@keyframes god{
+    0%,10%  { transform: translateY(0) }
+  10%,20% { transform: translateY(-80px) }
+  20%,30% { transform: translateY(-200px) }
+  30%,40% { transform: translateY(-320px) }
+  40%,50% { transform: translateY(-440px) }
+  50%,60% { transform: translateY(-550px) }
+  60%,70% { transform: translateY(-665px) }
+  70%,80% { transform: translateY(-770px) }
+  80%,90% { transform: translateY(-890px) }
+  90% { transform: translateY(-1005px) }
+
+}
+
+.granate img{
+    height: 250px;
+    position: fixed;
+    animation: rotate 2s infinite, perem-left 10s linear, perem 10s linear ;
+    animation-fill-mode: forwards;
+    transition: step-end;
+
+}
+
+@keyframes rotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes perem-left{
+    0%{left:100%;}
+    10%{left:0;}
+    20%{left:85%;}
+    30%{left:0;}
+    40%{left:85%;}
+    50%{left:0%;}
+    60%{left:85%;}
+    70%{left:0;}
+    80%{left:85%;}
+    90%{left:0;}
+    100%{left:50%;}
+
+}
+
+ @keyframes perem{
+    0%{bottom:85%;}
+    25%{bottom:0;}
+    50%{bottom:85%;}
+    75%{bottom:0;}
+    100%{bottom:50%;}
+}
+
+.boom img{
+    height: 900px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    
+} 
+.boom{
+    animation: boom 10s;
+    animation-duration: 10s;
+    transition-delay: 10s;
+
+}
+
+@keyframes boom{
+    0%,99%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/* .boom1 img{
+    width: 1300px;
+    margin-top: -500px;
+   
+}
+.boom1{
+    animation: boom 2s forwards;
+    
+  
+
+    animation-duration: 9.80s;
+
+}
+@keyframes boom1{
+    0%,97%{opacity: 0;}
+    97%,98%{opacity: 1;}
+    99%,100%{opacity: 0; display: none}
+
+
+} */
